@@ -3,9 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [db, setDb] = useState(74);
-  const [resist, setResist] = useState(13);
-  const [miss, setMiss] = useState(29);
+  const [db, setDb] = useState(228);
+  const [resist, setResist] = useState(41);
+  const [miss, setMiss] = useState(104);
 
   const eventHandler = e => {
     switch (e.keyCode) {
@@ -30,6 +30,7 @@ function App() {
       <p>{`[S] resistances: ${resist}`}</p>
       <p>{`[D] misses(no defbreak no resist): ${miss}`}</p>
       <p>{`total hits: ${db + resist + miss}`}</p>
+      <p>{`resist rate: ${resist/(db + resist)*100}%`}</p>
     </div>
   );
 }
